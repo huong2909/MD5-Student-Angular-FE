@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {StudentService} from '../../model/student.service';
+import {StudentService} from '../student.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 
 @Component({
