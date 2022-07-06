@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {StudentService} from '../../s/student.service';
+import {StudentService} from '../../model/student.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
-import {ClazzService} from '../../s/clazz.service';
+import {ClazzService} from '../../model/clazz.service';
 import {Clazz} from '../../model/Clazz';
 
 @Component({

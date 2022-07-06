@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Clazz} from '../../model/Clazz';
 import {HttpClient} from '@angular/common/http';
-import {StudentService} from '../../s/student.service';
-import {ClazzService} from '../../s/clazz.service';
+import {StudentService} from '../../model/student.service';
+import {ClazzService} from '../../model/clazz.service';
 
 @Component({
   selector: 'app-student-create',
