@@ -1,0 +1,25 @@
+<h1>Xoá danh mục sản phẩm</h1>
+<form [formGroup]="studentForm" (ngSubmit)="delete(id)">
+  <table>
+    <tr>
+      <td>Tên: </td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Điểm: </td>
+      <td><input type="text" formControlName="score"></td>
+    </tr>
+    <tr>
+      <td>Tuổi: </td>
+      <td><input type="text" formControlName="age"></td>
+    </tr>
+    <tr>
+      <td>Lớp: </td>
+      <td><input type="text" formControlName="clazz"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Xoá</button></td>
+    </tr>
+  </table>
+</form>

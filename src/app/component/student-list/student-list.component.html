@@ -1,0 +1,40 @@
+<form [formGroup]="studentForm" (ngSubmit)="searchByName()">
+  <input type="text" formControlName='name'>
+  <button>Tìm theo tên</button>
+</form>
+<br>
+<form [formGroup]="studentForm" (ngSubmit)="searchByClazzId()">
+  <select formControlName = "clazzId">
+    <option *ngFor="let clazz of listClazz" [value]="clazz.id">
+      {{clazz.name}}
+    </option>
+  </select>
+  <button>Tìm theo lớp</button>
+</form>
+<br>
+<form [formGroup]="studentForm" (ngSubmit)="searchByScore()">
+  <input type="text" formControlName='from'>
+  <input type="text" formControlName='to'>
+  <button>Tìm theo điểm </button>
+</form>
+<br>
+<table border="1px">
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td>Điểm</td>
+    <td>Tuổi</td>
+    <td>Lớp</td>
+  </tr>
+  <tr *ngFor="let student of student; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.score}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.clazz.name}}</td>
+    <td><a [routerLink]="['edit',student.id]">Edit</a></td>
+    <td><a [routerLink]="['delete',student.id]">Delete</a></td>
+  </tr>
+</table>
+
+

@@ -1,0 +1,33 @@
+<h1>Tạo danh bài viết</h1>
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Tên</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Điểm</td>
+      <td><input type="text" formControlName="score"></td>
+    </tr>
+    <tr>
+      <td>Tuổi</td>
+      <td><input type="text" formControlName="age"></td>
+    </tr>
+    <tr>
+      <td>Lớp</td>
+      <td><select formControlName = "clazzId">
+        <option *ngFor="let clazz of listClazz" [value]="clazz.id">
+          {{clazz.name}}
+        </option>
+      </select></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <button>Tạo mới</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
